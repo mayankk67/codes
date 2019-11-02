@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Pdflink from './components/PdfFromLink';
+import Pdftext from './components/PdfFromText';
+import Hompage from './components/Hompage';
+import {Switch, Route, BrowserRouter} from 'react-router-dom';
+import Routex from './components/routes';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <BrowserRouter>
+    <div>
+      <header >
+      <Routex />
+      <Switch>
+          <Route path='/' exact component={Hompage}></Route>
+          <Route path='/pdfFromLink' component={Pdflink}></Route>
+          <Route path='/pdfFromText' component={Pdftext}></Route>
+      </Switch>
       </header>
     </div>
+    </BrowserRouter>
   );
 }
 
