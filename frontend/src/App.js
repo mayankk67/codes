@@ -3,7 +3,7 @@ import './App.css';
 import Pdflink from './components/PdfFromLink';
 import Pdftext from './components/PdfFromText';
 import Hompage from './components/Hompage';
-import {Switch, Route, BrowserRouter} from 'react-router-dom';
+import {Switch, Route, BrowserRouter } from 'react-router-dom';
 import Routex from './components/routes';
 
 function App() {
